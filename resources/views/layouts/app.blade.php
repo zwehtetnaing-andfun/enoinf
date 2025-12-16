@@ -8,7 +8,6 @@
     <meta name="keywords" content="@yield('keywords', 'エヴォルブド・インフォ,こそだてDAYS,こそだてデイズ,昔ばなし絵巻,怒らない子育て,嶋津良智,夢我人,神田織音,人力')">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
     
-    <!-- Google font -->
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous" />
     
@@ -33,7 +32,6 @@
     @stack('styles')
 </head>
 <body>
-    <!--header-->
     <div class="header">
         <div class="container">
             <div class="row">
@@ -43,9 +41,7 @@
             </div>
         </div>
     </div>
-    <!--//header-->
 
-    <!--globalNav-->
     <div class="globalNav">
         <div class="container">
             <div class="navbar-header">
@@ -74,11 +70,9 @@
             </nav>
         </div>
     </div>
-    <!--//globalNav-->
 
     @yield('content')
 
-    <!-- brandsIntro -->
     <div id="brandsIntro">
         <div class="container">
             <ul class="row brandBox">
@@ -107,9 +101,7 @@
             <p class="footerCopy">Evolved Information 進化した情報の提供</p>
         </div>
     </div>
-    <!-- //brandsIntro -->
 
-    <!--footer-->
     <footer id="footer">
         <div class="container">
             <div class=" col-xs-12 col-sm-8">
@@ -126,7 +118,6 @@
             </div>
         </div>
     </footer>
-    <!--//footer-->
     
     <a href="#top" id="toTop"><img src="{{ asset('assets/img/totop.png') }}" alt="TOPに戻る" width="35" height="41"></a>
     

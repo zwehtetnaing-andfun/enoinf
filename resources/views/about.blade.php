@@ -91,7 +91,7 @@
     </div>
 </section>
 
-<!--office -->
+
 <section id="office">
     <div class="container">
         <h2>地図</h2>
@@ -105,5 +105,5 @@
         </div>
     </div>
 </section>
-<!--//office -->
+
 @endsection

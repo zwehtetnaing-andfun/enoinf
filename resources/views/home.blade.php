@@ -3,7 +3,7 @@
 @section('title', '株式会社エヴォルブド・インフォ')
 
 @section('content')
-<!--mainVisual-->
+
 <div class="pageVisualWrapper visualToppage">
     <div class="headerText container">
         <div class="row">
@@ -14,7 +14,7 @@
         </div>
     </div>
 </div>
-<!--//mainVisual-->
+
 
 <section id="newsSection">
     <div class="container">
@@ -43,7 +43,7 @@
     </div>
 </section>
 
-<!--section-->
+
 <section id="topBusiness">
     <div class="container">
         <h2>SERVICE<span class="japanase">サービス概要</span></h2>
@@ -96,5 +96,5 @@
         </div>
     </div>
 </section>
-<!--//section-->
+
 @endsection

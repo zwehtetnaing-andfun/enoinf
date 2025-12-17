@@ -25,13 +25,23 @@
     
     <section class="contactWrapper">
         <div class="container">
-            <div class="col-xs-12 evo_input">
+            <div class="col-xs-12 evo_input" @if(session('success')) style="display:none;" @endif>
                 <h2>アンガーマネジメント嶋津良智 お問い合わせ</h2>
                 <hr class="hrWhite" />
                 <p class="lead pCenter">下記フォームに必要事項を入力の上送信してください。</p>
                 <p class="pCenter">お問い合わせ頂いた内容につきましては、後ほど、担当者よりご連絡をさせていただきます。<br>なお、お問い合わせいただいた内容によっては、ご連絡までお時間がかかるものがございます。<br>あらかじめご了承ください。</p>
                 
-                <form action="#" method="post" class="form-horizontal">
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+                
+                <form action="{{ route('contact.anger.submit') }}" method="post" class="form-horizontal">
                     @csrf
                     <fieldset class="form-horizontal">
                         <div class="form-group">
@@ -201,7 +211,7 @@
                 </form>
             </div>
             
-            <div class="col-xs-12 evo_output" style="display:none;">
+            <div class="col-xs-12 evo_output" @if(session('success')) style="display:block;" @else style="display:none;" @endif>
                 <h2>アンガーマネジメント嶋津良智 お問い合わせ &nbsp;&nbsp;送信完了</h2>
                 <hr class="hrWhite" />
                 <p class="lead pCenter">お問い合わせ頂きありがとうございます。</p>

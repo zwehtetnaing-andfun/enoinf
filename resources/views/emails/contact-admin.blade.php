@@ -8,14 +8,34 @@
     <h2>お問い合わせがありました</h2>
     
     <table style="width: 100%; border-collapse: collapse;">
+        @if(!empty($formData['type']))
         <tr>
             <td style="padding: 8px; background-color: #f5f5f5; border: 1px solid #ddd; width: 200px;"><strong>企業 or 個人</strong></td>
             <td style="padding: 8px; border: 1px solid #ddd;">{{ $formData['type'] }}</td>
         </tr>
+        @endif
         <tr>
             <td style="padding: 8px; background-color: #f5f5f5; border: 1px solid #ddd;"><strong>貴社名</strong></td>
             <td style="padding: 8px; border: 1px solid #ddd;">{{ $formData['corporate'] }}</td>
         </tr>
+        @if(!empty($formData['url']))
+        <tr>
+            <td style="padding: 8px; background-color: #f5f5f5; border: 1px solid #ddd;"><strong>URL</strong></td>
+            <td style="padding: 8px; border: 1px solid #ddd;">{{ $formData['url'] }}</td>
+        </tr>
+        @endif
+        @if(!empty($formData['media']))
+        <tr>
+            <td style="padding: 8px; background-color: #f5f5f5; border: 1px solid #ddd;"><strong>媒体名</strong></td>
+            <td style="padding: 8px; border: 1px solid #ddd;">{{ $formData['media'] }}</td>
+        </tr>
+        @endif
+        @if(!empty($formData['mediaurl']))
+        <tr>
+            <td style="padding: 8px; background-color: #f5f5f5; border: 1px solid #ddd;"><strong>媒体URL</strong></td>
+            <td style="padding: 8px; border: 1px solid #ddd;">{{ $formData['mediaurl'] }}</td>
+        </tr>
+        @endif
         <tr>
             <td style="padding: 8px; background-color: #f5f5f5; border: 1px solid #ddd;"><strong>お名前</strong></td>
             <td style="padding: 8px; border: 1px solid #ddd;">{{ $formData['yourname'] }}</td>

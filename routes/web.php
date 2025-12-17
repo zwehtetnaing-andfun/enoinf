@@ -1,24 +1,44 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PageController;
 use App\Http\Controllers\ContactController;
 
-// Main pages
-Route::get('/', [PageController::class, 'home'])->name('home');
-Route::get('/about', [PageController::class, 'about'])->name('about');
-Route::get('/services', [PageController::class, 'services'])->name('services');
-Route::get('/contact', [PageController::class, 'contact'])->name('contact');
-Route::get('/privacy', [PageController::class, 'privacy'])->name('privacy');
+Route::get('/', function(){
+    return redirect('/index.html');
+})->name('home');
 
-// Contact form pages
-Route::get('/contact/press', [PageController::class, 'contactPress'])->name('contact.press');
-Route::get('/contact/phonics', [PageController::class, 'contactPhonics'])->name('contact.phonics');
-Route::get('/contact/mukashi', [PageController::class, 'contactMukashi'])->name('contact.mukashi');
-Route::get('/contact/game', [PageController::class, 'contactGame'])->name('contact.game');
-Route::get('/contact/koudan', [PageController::class, 'contactKoudan'])->name('contact.koudan');
-Route::get('/contact/anger', [PageController::class, 'contactAnger'])->name('contact.anger');
-Route::get('/contact/general', [PageController::class, 'contactGeneral'])->name('contact.general');
+Route::get('/about', function(){
+    return redirect('/about/index.html');
+})->name('about');
 
-// Contact form submissions
+Route::get('/services',function(){
+    return redirect('/services/index.html');
+})->name('services');
+
+Route::get('/contact/index.html',function(){
+    return redirect('/contact');
+});
+
+Route::get('/contact', function(){
+    return view('contact');
+})->name('contact');
+
+Route::get('/privacy',function(){
+    return redirect('/privacy/index.html');
+})->name('privacy');
+
+Route::get('/contact/press', [ContactController::class, 'contactPress'])->name('contact.press');
+Route::get('/contact/phonics', [ContactController::class, 'contactPhonics'])->name('contact.phonics');
+Route::get('/contact/mukashi', [ContactController::class, 'contactMukashi'])->name('contact.mukashi');
+Route::get('/contact/game', [ContactController::class, 'contactGame'])->name('contact.game');
+Route::get('/contact/koudan', [ContactController::class, 'contactKoudan'])->name('contact.koudan');
+Route::get('/contact/anger', [ContactController::class, 'contactAnger'])->name('contact.anger');
+Route::get('/contact/general', [ContactController::class, 'contactGeneral'])->name('contact.general');
+
 Route::post('/contact/general', [ContactController::class, 'submitGeneral'])->name('contact.general.submit');
+Route::post('/contact/press', [ContactController::class, 'submitPress'])->name('contact.press.submit');
+Route::post('/contact/phonics', [ContactController::class, 'submitPhonics'])->name('contact.phonics.submit');
+Route::post('/contact/mukashi', [ContactController::class, 'submitMukashi'])->name('contact.mukashi.submit');
+Route::post('/contact/game', [ContactController::class, 'submitGame'])->name('contact.game.submit');
+Route::post('/contact/koudan', [ContactController::class, 'submitKoudan'])->name('contact.koudan.submit');
+Route::post('/contact/anger', [ContactController::class, 'submitAnger'])->name('contact.anger.submit');

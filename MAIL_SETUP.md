@@ -43,14 +43,19 @@ Update the following in your `.env` file:
 
 ### Testing:
 
-After configuration, test the contact form by:
+After configuration, test any contact form by visiting:
 
-1. Visit `/contact/general`
-2. Fill out the form
-3. Submit
-4. Check both emails:
-   - Admin email: `zwehtet.dev@gmail.com`
-   - Customer email: The email address entered in the form
+- `/contact/general` - その他 お問い合わせ
+- `/contact/press` - プレス お問い合わせ
+- `/contact/phonics` - Phonics お問い合わせ
+- `/contact/mukashi` - 昔ばなし絵巻 お問い合わせ
+- `/contact/game` - 地方創生ゲーム お問い合わせ
+- `/contact/koudan` - 講談師神田織音 お問い合わせ
+- `/contact/anger` - アンガーマネジメント嶋津良智 お問い合わせ
+
+Fill out the form, submit, and check both emails:
+- Admin email: `zwehtet.dev@gmail.com`
+- Customer email: The email address entered in the form
 
 ### What Happens:
 
@@ -60,14 +65,21 @@ When a user submits the contact form:
 2. **Customer receives**: A confirmation email with their submitted information
 3. **Success message**: The form is hidden and a success message is displayed
 
-### Files Created:
+### Files Created/Updated:
 
-- `app/Http/Controllers/ContactController.php` - Handles form submission
+- `app/Http/Controllers/ContactController.php` - Handles all contact form submissions
 - `app/Mail/ContactFormMail.php` - Mailable class for emails
-- `resources/views/emails/contact-admin.blade.php` - Admin email template
+- `resources/views/emails/contact-admin.blade.php` - Admin email template (supports all form types)
 - `resources/views/emails/contact-customer.blade.php` - Customer confirmation email template
-- Updated `routes/web.php` - Added POST route for form submission
-- Updated `resources/views/contact/general.blade.php` - Form now submits to the controller
+- Updated `routes/web.php` - Added POST routes for all 7 contact forms
+- Updated all contact form views:
+  - `resources/views/contact/general.blade.php`
+  - `resources/views/contact/press.blade.php`
+  - `resources/views/contact/phonics.blade.php`
+  - `resources/views/contact/mukashi.blade.php`
+  - `resources/views/contact/game.blade.php`
+  - `resources/views/contact/koudan.blade.php`
+  - `resources/views/contact/anger.blade.php`
 
 ### Troubleshooting:
 

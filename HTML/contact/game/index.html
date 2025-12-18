@@ -27,6 +27,7 @@
   <link rel="stylesheet" href="../../assets/themes/template03/css/whhg.css" />
 
   <link rel="stylesheet" href="../../assets/css/main.css" />
+  <link rel="stylesheet" href="../../assets/css/style.css" />
   <link rel="stylesheet" href="../../wp-content/themes/evoinfo/style.css" />
 
 
@@ -75,6 +76,45 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <link rel="apple-touch-icon" href="../../wp-content/uploads/2022/04/cropped-logo_evo-180x180.png" />
 <meta name="msapplication-TileImage" content="wp-content/uploads/2022/04/cropped-logo_evo-270x270.png" />
 <link rel='stylesheet' id='contact-form-7-css' href='../../wp-content/plugins/contact-form-7/includes/css/styles42f0.css?ver=5.6.3' type='text/css' media='all' />
+<style>
+        /* Radio button layout fix - 3 items per row for first row, then 2 for second row */
+        .wpcf7-radio {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .wpcf7-radio .wpcf7-list-item {
+            display: inline-block;
+            flex: 0 0 31%;
+            margin: 0;
+            padding: 0;
+            vertical-align: middle;
+            white-space: nowrap;
+        }
+
+        .wpcf7-radio .wpcf7-list-item label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 0;
+            white-space: nowrap;
+        }
+
+        .wpcf7-radio .wpcf7-list-item input[type="radio"] {
+            margin: 0 !important;
+            vertical-align: middle;
+            flex-shrink: 0;
+        }
+
+        .wpcf7-radio .wpcf7-list-item-label {
+            white-space: nowrap;
+        }
+         div.pageVisualWrapper {
+    padding: 62px 0 1em 2em;
+    position: relative;
+}
+    </style>
 </head>
 
 <body>
@@ -132,7 +172,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
           </nav>
           <div class="pageVisualWrapper visualContact">
               <div class="container">
-                  <h1>Contact</h1>
+                  <h1 class="header-font">Contact</h1>
                   <p>地方創生ゲーム お問い合わせ</p>
               </div>
           </div>

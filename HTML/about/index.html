@@ -30,8 +30,7 @@
   <link rel="stylesheet" href="../assets/themes/template03/css/whhg.css" />
 
   <link rel="stylesheet" href="../assets/css/main.css" />
-  <link rel="stylesheet" href="../wp-content/themes/evoinfo/style.css" />
-
+<link rel="stylesheet" href="../assets/css/style.css" />
 
   <link rel="stylesheet" href="../assets/themes/template03/css/page_top.css">
   <script src="../../ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
@@ -55,6 +54,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 		background: none !important;
 		padding: 0 !important;
     }
+    div.pageVisualWrapper {
+    padding: 4em 0 1em 2em;
+    position: relative;
+}
 </style>
 <style id='wp-block-library-inline-css' type='text/css'>
 :root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}.has-text-align-center{text-align:center}.has-text-align-left{text-align:left}.has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-wrap:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
@@ -128,7 +131,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     </nav>
 
     <div class="pageVisualWrapper visualCompany">
-        <h1>Company Profile</h1>
+        <h1 class="header-font">Company Profile</h1>
         <p>企業概要</p>
     </div>
     <section id="japan" class="companyProfileWrapper">
@@ -137,22 +140,22 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
             <div class="row">
                 <div class="col-xs-12 col-sm-10 col-sm-offset-1">
                     <table class="companyTable table table-bordered table-striped">
-						<tr>
-							<th>会社名</th>
-							<td>株式会社エヴォルブド・インフォ</td>
-						</tr>
-						<tr>
-							<th>代表者</th>
-							<td>代表取締役　原田栄一</td>
-						</tr>                                                
-						<tr>
-							<th>設立</th>
-							<td>2005年12月</td>
-						</tr>
-						<tr>
-							<th>所在地</th>
-							<td>〒105-0004　東京都港区新橋1-16-4 りそな新橋ビル6F</td>
-						</tr>
+                        <tr>
+                            <th style="font-size:14px;font-style:normal;font-weight:700;line-height:20px;color:rgb(69,59,57);background-color:rgb(249,249,249);font-family:'Open Sans', Roboto, 'Droid Sans', 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;text-align:left;text-indent:0;text-transform:none;text-decoration:none;">会社名</th>
+                            <td>株式会社エヴォルブド・インフォ</td>
+                        </tr>
+                        <tr>
+                            <th style="font-size:14px;font-style:normal;font-weight:700;line-height:20px;color:rgb(69,59,57);background-color:rgb(249,249,249);font-family:'Open Sans', Roboto, 'Droid Sans', 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;text-align:left;text-indent:0;text-transform:none;text-decoration:none;">代表者</th>
+                            <td>代表取締役　原田栄一</td>
+                        </tr>                                                
+                        <tr>
+                            <th style="font-size:14px;font-style:normal;font-weight:700;line-height:20px;color:rgb(69,59,57);background-color:rgb(249,249,249);font-family:'Open Sans', Roboto, 'Droid Sans', 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;text-align:left;text-indent:0;text-transform:none;text-decoration:none;">設立</th>
+                            <td>2005年12月</td>
+                        </tr>
+                        <tr>
+                            <th style="font-size:14px;font-style:normal;font-weight:700;line-height:20px;color:rgb(69,59,57);background-color:rgb(249,249,249);font-family:'Open Sans', Roboto, 'Droid Sans', 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;text-align:left;text-indent:0;text-transform:none;text-decoration:none;">所在地</th>
+                            <td>〒105-0004　東京都港区新橋1-16-4 りそな新橋ビル6F</td>
+                        </tr>
 						<tr>
 							<!-- <th>TEL</th>
 							<td><a href="tel:03-5537-7437">03-5537-7437</a></td>
@@ -162,18 +165,18 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 							<td>03-5537-7435</td>
 							</tr>-->
 
-						<tr>
-							<th>従業員数</th>
-							<td>20名</td>
-						</tr>
-						<tr>
-							<th>取引銀行</th>
-							<td>みずほ銀行</td>
-						</tr>
-						<tr>
-							<th>事業内容</th>
-							<td>出版、広告、電子商取引、コンサルティング</td>
-						</tr>
+                        <tr>
+                            <th style="font-size:14px;font-style:normal;font-weight:700;line-height:20px;color:rgb(69,59,57);background-color:rgb(249,249,249);font-family:'Open Sans', Roboto, 'Droid Sans', 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;text-align:left;text-indent:0;text-transform:none;text-decoration:none;">従業員数</th>
+                            <td>20名</td>
+                        </tr>
+                        <tr>
+                            <th style="font-size:14px;font-style:normal;font-weight:700;line-height:20px;color:rgb(69,59,57);background-color:rgb(249,249,249);font-family:'Open Sans', Roboto, 'Droid Sans', 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;text-align:left;text-indent:0;text-transform:none;text-decoration:none;">取引銀行</th>
+                            <td>みずほ銀行</td>
+                        </tr>
+                        <tr>
+                            <th style="font-size:14px;font-style:normal;font-weight:700;line-height:20px;color:rgb(69,59,57);background-color:rgb(249,249,249);font-family:'Open Sans', Roboto, 'Droid Sans', 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;text-align:left;text-indent:0;text-transform:none;text-decoration:none;">事業内容</th>
+                            <td>出版、広告、電子商取引、コンサルティング</td>
+                        </tr>
                      </table>
                 </div>
               </div>
@@ -186,18 +189,6 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
             <div class="row">
                 <div class="col-xs-12 col-sm-10 col-sm-offset-1">
                         <table class="companyTable table table-bordered table-striped">
-                                <tr>
-                                        <th>2005年12月22日</th>
-                                        <td>有限会社エヴォルブド・インフォを東京都渋谷区恵比寿に開設</td>
-                                </tr>
-                                <tr>
-                                        <th>2006年6月24日</th>
-                                        <td>株式会社に組織変更</td>
-                                </tr>
-                                <tr>
-                                        <th>2006年7月30日</th>
-                                        <td>本社を東京都新宿区西新宿に移転</td>
-                                </tr>
                                <!-- <tr>
                                         <th>2008年10月1日</th>
                                         <td>タイのフリーペーパー「バンコクマダム」（BKM.CO.LTD）と業務提携</td>
@@ -206,14 +197,26 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                                         <th>2009年7月31日</th>
                                         <td>シンガポールのフリーペーパー「パルティ」と業務提携</td>
                                 </tr>-->
-                                <tr>
-                                        <th>2014年5月12日</th>
-                                        <td>本社を東京都港区東新橋に移転</td>
+                            <tr>
+                                    <th style="font-size:14px;font-style:normal;font-weight:700;line-height:20px;color:rgb(69,59,57);background-color:rgb(249,249,249);font-family:'Open Sans', Roboto, 'Droid Sans', 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;text-align:left;text-indent:0;text-transform:none;text-decoration:none;">2005年12月22日</th>
+                                    <td>有限会社エヴォルブド・インフォを東京都渋谷区恵比寿に開設</td>
                                 </tr>
                                 <tr>
-                                        <th>2022年2月14日</th>
-                                        <td>本社を東京都港区新橋に移転</td>
+                                    <th style="font-size:14px;font-style:normal;font-weight:700;line-height:20px;color:rgb(69,59,57);background-color:rgb(249,249,249);font-family:'Open Sans', Roboto, 'Droid Sans', 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;text-align:left;text-indent:0;text-transform:none;text-decoration:none;">2006年6月24日</th>
+                                    <td>株式会社に組織変更</td>
                                 </tr>
+                                <tr>
+                                    <th style="font-size:14px;font-style:normal;font-weight:700;line-height:20px;color:rgb(69,59,57);background-color:rgb(249,249,249);font-family:'Open Sans', Roboto, 'Droid Sans', 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;text-align:left;text-indent:0;text-transform:none;text-decoration:none;">2006年7月30日</th>
+                                    <td>本社を東京都新宿区西新宿に移転</td>
+                                </tr>
+                <tr>
+                    <th style="font-size:14px;font-style:normal;font-weight:700;line-height:20px;color:rgb(69,59,57);background-color:rgb(249,249,249);font-family:'Open Sans', Roboto, 'Droid Sans', 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;text-align:left;text-indent:0;text-transform:none;text-decoration:none;">2014年5月12日</th>
+                    <td>本社を東京都港区東新橋に移転</td>
+                </tr>
+                <tr>
+                    <th style="font-size:14px;font-style:normal;font-weight:700;line-height:20px;color:rgb(69,59,57);background-color:rgb(249,249,249);font-family:'Open Sans', Roboto, 'Droid Sans', 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;text-align:left;text-indent:0;text-transform:none;text-decoration:none;">2022年2月14日</th>
+                    <td>本社を東京都港区新橋に移転</td>
+                </tr>
 
                         </table>
                 </div>

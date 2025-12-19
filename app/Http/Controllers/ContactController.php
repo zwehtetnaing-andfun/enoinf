@@ -52,7 +52,7 @@ class ContactController extends Controller
 
     private function validateCommonFields(Request $request)
     {
-        return $request->validate([
+        $rules = [
             'type' => 'nullable|string',
             'corporate' => 'required|string|max:255',
             'yourname' => 'required|string|max:255',
@@ -70,7 +70,21 @@ class ContactController extends Controller
             'url' => 'nullable|string|max:255',
             'media' => 'nullable|string|max:255',
             'mediaurl' => 'nullable|string|max:255',
-        ]);
+        ];
+
+        $messages = [
+            'corporate.required' => 'これは必須項目です。',
+            'yourname.required' => 'これは必須項目です。',
+            'kana.required' => 'これは必須項目です。',
+            'email.required' => 'これは必須項目です。',
+            'email.email' => 'メールアドレスの形式で入力してください。',
+            'pref.required' => 'これは必須項目です。',
+            'address1.required' => 'これは必須項目です。',
+            'tel.required' => 'これは必須項目です。',
+            'message.required' => 'これは必須項目です。',
+        ];
+
+        return $request->validate($rules, $messages);
     }
 
     private function sendEmails($validated)

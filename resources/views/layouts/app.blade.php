@@ -40,6 +40,19 @@
          .form-group {
     margin-bottom: 25px;
 }
+        .contact-error-banner {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            border: 1px solid #f7c948;
+            background: transparent;
+            padding: 6px 12px;
+            margin: 15px 0;
+            color: #000000;
+            font-size: 13px;
+            line-height: 1.4;
+            text-align: center;
+        }
                 </style>
     @stack('styles')
 </head>

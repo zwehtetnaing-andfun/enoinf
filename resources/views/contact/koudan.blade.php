@@ -31,17 +31,9 @@
                 <p class="lead pCenter">下記フォームに必要事項を入力の上送信してください。</p>
                 <p class="pCenter">お問い合わせ頂いた内容につきましては、後ほど、担当者よりご連絡をさせていただきます。<br>なお、お問い合わせいただいた内容によっては、ご連絡までお時間がかかるものがございます。<br>あらかじめご了承ください。</p>
                 
-                @if ($errors->any())
-                    <div class="alert alert-danger">
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
-                @endif
+                {{-- error banner moved below submit button --}}
                 
-                <form action="{{ route('contact.koudan.submit') }}" method="post" class="form-horizontal">
+                <form action="{{ route('contact.koudan.submit') }}" method="post" class="form-horizontal" novalidate>
                     @csrf
                     <fieldset class="form-horizontal">
                         <div class="form-group">
@@ -59,6 +51,9 @@
                             <label class="col-md-4 control-label" for="corporate">*貴社名</label>
                             <div class="col-md-4">
                                 <input type="text" name="corporate" class="form-control input-md" id="corporate" placeholder="会社名をご入力ください" required />
+                                @error('corporate')
+                                    <p class="text-danger">{{ $message }}</p>
+                                @enderror
                             </div>
                         </div>
                         
@@ -66,6 +61,9 @@
                             <label class="col-md-4 control-label" for="yourname">*お名前</label>
                             <div class="col-md-4">
                                 <input type="text" name="yourname" class="form-control input-md" id="yourname" required />
+                                @error('yourname')
+                                    <p class="text-danger">{{ $message }}</p>
+                                @enderror
                             </div>
                         </div>
                         
@@ -73,6 +71,9 @@
                             <label class="col-md-4 control-label" for="kana">*フリガナ</label>
                             <div class="col-md-4">
                                 <input type="text" name="kana" class="form-control input-md" id="kana" required />
+                                @error('kana')
+                                    <p class="text-danger">{{ $message }}</p>
+                                @enderror
                             </div>
                         </div>
                         
@@ -80,6 +81,9 @@
                             <label class="col-md-4 control-label" for="email">*ご連絡先メールアドレス</label>
                             <div class="col-md-4">
                                 <input type="email" name="email" class="form-control input-md" id="email" required />
+                                @error('email')
+                                    <p class="text-danger">{{ $message }}</p>
+                                @enderror
                             </div>
                         </div>
                         
@@ -146,6 +150,9 @@
                                     <option value="海外">海外</option>
                                 </select><br />
                                 <span class="help-block">海外の方は「海外」を選択してください</span>
+                                @error('pref')
+                                    <p class="text-danger">{{ $message }}</p>
+                                @enderror
                             </div>
                         </div>
                         
@@ -153,6 +160,9 @@
                             <label class="col-md-4 control-label" for="address1">*住所</label>
                             <div class="col-md-4">
                                 <input type="text" name="address1" class="form-control input-md" id="address1" required />
+                                @error('address1')
+                                    <p class="text-danger">{{ $message }}</p>
+                                @enderror
                             </div>
                         </div>
                         
@@ -167,6 +177,9 @@
                             <label class="col-md-4 control-label" for="tel">*電話番号</label>
                             <div class="col-md-4">
                                 <input type="tel" name="tel" class="form-control input-md" id="tel" placeholder="03-0000-0000" required />
+                                @error('tel')
+                                    <p class="text-danger">{{ $message }}</p>
+                                @enderror
                             </div>
                         </div>
                         
@@ -181,6 +194,9 @@
                             <label class="col-md-4 control-label" for="inquiries">*お問い合わせ内容</label>
                             <div class="col-md-4">
                                 <textarea name="message" class="form-control" id="inquiries" rows="10" required></textarea>
+                                @error('message')
+                                    <p class="text-danger">{{ $message }}</p>
+                                @enderror
                             </div>
                         </div>
                         
@@ -207,6 +223,11 @@
                                 <input type="submit" value="送信する" class="btn btn-primary btn-mediaPaper" />
                             </div>
                         </div>
+                        @if ($errors->any())
+                            <div class="contact-error-banner">
+                                1つまたは複数のフィールドにエラーがあります。ご確認の上、再度お試しください。
+                            </div>
+                        @endif
                     </fieldset>
                 </form>
             </div>

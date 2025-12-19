@@ -197,10 +197,10 @@
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="howtoknow">どのようにして当社をお知りになりましたか</label>
                             <div class="col-md-4">
-                                <label><input type="radio" name="howtoknow" value="検索エンジン" checked /> 検索エンジン</label><br>
-                                <label><input type="radio" name="howtoknow" value="プレスリリース" /> プレスリリース</label><br>
-                                <label><input type="radio" name="howtoknow" value="紹介" /> 紹介</label><br>
-                                <label><input type="radio" name="howtoknow" value="口コミ" /> 口コミ</label><br>
+                                <label style="margin-right: 20px;"><input type="radio" name="howtoknow" value="検索エンジン" checked /> 検索エンジン</label>
+                                <label style="margin-right: 20px;"><input type="radio" name="howtoknow" value="プレスリリース" /> プレスリリース</label>
+                                <label style="margin-right: 20px;"><input type="radio" name="howtoknow" value="紹介" /> 紹介</label><br>
+                                <label style="margin-right: 20px;"><input type="radio" name="howtoknow" value="口コミ" /> 口コミ</label>
                                 <label><input type="radio" name="howtoknow" value="その他" /> その他</label>
                             </div>
                         </div>

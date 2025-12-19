@@ -9,10 +9,6 @@
     border-color: #61425b;
     color: #fff;
 }
-     div.pageVisualWrapper {
-    padding: 62px 0 1em 2em;
-    position: relative;
-}
 </style>
 @endpush
 

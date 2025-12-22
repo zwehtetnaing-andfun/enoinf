@@ -44,6 +44,9 @@
                                     <option value="企業">企業</option>
                                     <option value="個人">個人</option>
                                 </select>
+                                <script>
+                                    document.getElementById('type').value = @json(old('type'));
+                                </script>
                                 @error('type')
                                     <p class="text-danger">{{ $message }}</p>
                                 @enderror
@@ -53,7 +56,7 @@
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="corporate">*貴社名</label>
                             <div class="col-md-4">
-                                <input type="text" name="corporate" class="form-control input-md" id="corporate" placeholder="会社名をご入力ください" required />
+                                <input type="text" name="corporate" class="form-control input-md" id="corporate" value="{{ old('corporate') }}" placeholder="会社名をご入力ください" required />
                                 @error('corporate')
                                     <p class="text-danger">{{ $message }}</p>
                                 @enderror
@@ -63,7 +66,7 @@
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="yourname">*お名前</label>
                             <div class="col-md-4">
-                                <input type="text" name="yourname" class="form-control input-md" id="yourname" required />
+                                <input type="text" name="yourname" class="form-control input-md" id="yourname" value="{{ old('yourname') }}" required />
                                 @error('yourname')
                                     <p class="text-danger">{{ $message }}</p>
                                 @enderror
@@ -73,7 +76,7 @@
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="kana">*フリガナ</label>
                             <div class="col-md-4">
-                                <input type="text" name="kana" class="form-control input-md" id="kana" required />
+                                <input type="text" name="kana" class="form-control input-md" id="kana" value="{{ old('kana') }}" required />
                                 @error('kana')
                                     <p class="text-danger">{{ $message }}</p>
                                 @enderror
@@ -84,7 +87,7 @@
                             <div style="margin-bottom: 10px;"></div>
                             <label class="col-md-4 control-label" for="email">*ご連絡先メールアドレス</label>
                             <div class="col-md-4">
-                                <input type="email" name="email" class="form-control input-md" id="email" required />
+                                <input type="email" name="email" class="form-control input-md" id="email" value="{{ old('email') }}" required />
                                 @error('email')
                                     <p class="text-danger">{{ $message }}</p>
                                 @enderror
@@ -94,7 +97,7 @@
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="zip">郵便番号</label>
                             <div class="col-md-4">
-                                <input type="text" name="zip" class="form-control input-md" id="zip" placeholder="100-0000" /><br />
+                                <input type="text" name="zip" class="form-control input-md" id="zip" value="{{ old('zip') }}" placeholder="100-0000" /><br />
                                 <span class="help-block">半角英数字でご入力ください</span>
                             </div>
                         </div>
@@ -152,19 +155,21 @@
                                     <option value="鹿児島県">鹿児島県</option>
                                     <option value="沖縄県">沖縄県</option>
                                     <option value="海外">海外</option>
-                                </select> @error('pref')
+                                </select>@error('pref')
                                     <p class="text-danger">{{ $message }}</p>
-                                @enderror<br />
-                                
-                               
+                                @enderror<br>
                                 <span class="help-block">海外の方は「海外」を選択してください</span>
+                                
+                                <script>
+                                    document.getElementById('pref').value = @json(old('pref'));
+                                </script>
                             </div>
                         </div>
                         
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="address1">*住所</label>
                             <div class="col-md-4">
-                                <input type="text" name="address1" class="form-control input-md" id="address1" required />
+                                <input type="text" name="address1" class="form-control input-md" id="address1" value="{{ old('address1') }}" required />
                                 @error('address1')
                                     <p class="text-danger">{{ $message }}</p>
                                 @enderror
@@ -174,14 +179,14 @@
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="address2">建物名等</label>
                             <div class="col-md-4">
-                                <input type="text" name="address2" class="form-control input-md" id="address2" />
+                                <input type="text" name="address2" class="form-control input-md" id="address2" value="{{ old('address2') }}" />
                             </div>
                         </div>
                         
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="tel">*電話番号</label>
                             <div class="col-md-4">
-                                <input type="tel" name="tel" class="form-control input-md" id="tel" placeholder="03-0000-0000" required />
+                                <input type="tel" name="tel" class="form-control input-md" id="tel" value="{{ old('tel') }}" placeholder="03-0000-0000" required />
                                 @error('tel')
                                     <p class="text-danger">{{ $message }}</p>
                                 @enderror
@@ -191,14 +196,14 @@
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="fax">FAX番号</label>
                             <div class="col-md-4">
-                                <input type="text" name="fax" class="form-control input-md" id="fax" />
+                                <input type="text" name="fax" class="form-control input-md" id="fax" value="{{ old('fax') }}" />
                             </div>
                         </div>
                         
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="inquiries">*お問い合わせ内容</label>
                             <div class="col-md-4">
-                                <textarea name="message" class="form-control" id="inquiries" rows="10" required></textarea>
+                                <textarea name="message" class="form-control" id="inquiries" rows="10" required>{{ old('message') }}</textarea>
                                 @error('message')
                                     <p class="text-danger">{{ $message }}</p>
                                 @enderror
@@ -208,18 +213,18 @@
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="howtoknow">どのようにして当社をお知りになりましたか</label>
                             <div class="col-md-4">
-                                <label style="margin-right: 20px;"><input type="radio" name="howtoknow" value="検索エンジン" checked /> 検索エンジン</label>
-                                <label style="margin-right: 20px;"><input type="radio" name="howtoknow" value="プレスリリース" /> プレスリリース</label>
-                                <label><input type="radio" name="howtoknow" value="紹介" /> 紹介</label><br>
-                                <label style="margin-right: 20px;"><input type="radio" name="howtoknow" value="口コミ" /> 口コミ</label>
-                                <label><input type="radio" name="howtoknow" value="その他" /> その他</label>
+                                <label style="margin-right: 20px;"><input type="radio" name="howtoknow" value="検索エンジン" {{ old('howtoknow', '検索エンジン') === '検索エンジン' ? 'checked' : '' }} /> 検索エンジン</label>
+                                <label style="margin-right: 20px;"><input type="radio" name="howtoknow" value="プレスリリース" {{ old('howtoknow') === 'プレスリリース' ? 'checked' : '' }} /> プレスリリース</label>
+                                <label><input type="radio" name="howtoknow" value="紹介" {{ old('howtoknow') === '紹介' ? 'checked' : '' }} /> 紹介</label><br>
+                                <label style="margin-right: 20px;"><input type="radio" name="howtoknow" value="口コミ" {{ old('howtoknow') === '口コミ' ? 'checked' : '' }} /> 口コミ</label>
+                                <label><input type="radio" name="howtoknow" value="その他" {{ old('howtoknow') === 'その他' ? 'checked' : '' }} /> その他</label>
                             </div>
                         </div>
                         
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="sonota">その他の場合</label>
                             <div class="col-md-4">
-                                <textarea name="sonota" class="form-control" id="sonota" rows="10" placeholder="上の質問でその他を選択された場合はご入力ください"></textarea>
+                                <textarea name="sonota" class="form-control" id="sonota" rows="10" placeholder="上の質問でその他を選択された場合はご入力ください">{{ old('sonota') }}</textarea>
                             </div>
                         </div>
                         

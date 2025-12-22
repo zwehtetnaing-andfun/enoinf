@@ -57,6 +57,7 @@
                             <label class="col-md-4 control-label" for="media">*媒体名</label>
                             <div class="col-md-4">
                                 <input type="text" name="media" class="form-control input-md" id="media" placeholder="媒体名をご入力ください" required />
+                               
                                 @error('media')
                                     <p class="text-danger">{{ $message }}</p>
                                 @enderror
@@ -161,11 +162,12 @@
                                     <option value="鹿児島県">鹿児島県</option>
                                     <option value="沖縄県">沖縄県</option>
                                     <option value="海外">海外</option>
-                                </select><br />
-                                <span class="help-block">海外の方は「海外」を選択してください</span>
+                                </select>
+                               
                                 @error('pref')
                                     <p class="text-danger">{{ $message }}</p>
-                                @enderror
+                                @enderror <br>
+                                 <span class="help-block">海外の方は「海外」を選択してください</span>
                             </div>
                         </div>
                         

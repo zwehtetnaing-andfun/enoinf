@@ -52,7 +52,10 @@
             font-size: 13px;
             line-height: 1.4;
             text-align: center;
-        }
+        }.control-label{
+padding-right: 22px;
+}
+
                 </style>
     @stack('styles')
 </head>

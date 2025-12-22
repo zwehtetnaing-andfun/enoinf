@@ -68,7 +68,7 @@ class ContactController extends Controller
             'howtoknow' => 'nullable|string',
             'sonota' => 'nullable|string',
             'url' => 'nullable|string|max:255',
-            'media' => 'nullable|string|max:255',
+            'media' => 'required|string|max:255',
             'mediaurl' => 'nullable|string|max:255',
         ];
 
@@ -82,6 +82,7 @@ class ContactController extends Controller
             'address1.required' => 'これは必須項目です。',
             'tel.required' => 'これは必須項目です。',
             'message.required' => 'これは必須項目です。',
+            'media.required' => 'これは必須項目です。',
         ];
 
         return $request->validate($rules, $messages);

@@ -148,11 +148,11 @@
                                     <option value="鹿児島県">鹿児島県</option>
                                     <option value="沖縄県">沖縄県</option>
                                     <option value="海外">海外</option>
-                                </select><br />
-                                <span class="help-block">海外の方は「海外」を選択してください</span>
-                                @error('pref')
+                                </select>@error('pref')
                                     <p class="text-danger">{{ $message }}</p>
-                                @enderror
+                                @enderror<br />
+                                <span class="help-block">海外の方は「海外」を選択してください</span>
+                                
                             </div>
                         </div>
                         

@@ -77,7 +77,7 @@ class ContactController extends Controller
             'yourname.required' => 'これは必須項目です。',
             'kana.required' => 'これは必須項目です。',
             'email.required' => 'これは必須項目です。',
-            'email.email' => 'これは必須項目です。',
+            'email.email' => 'フリガナは全角カナで入力してください。',
             'pref.required' => 'これは必須項目です。',
             'address1.required' => 'これは必須項目です。',
             'tel.required' => 'これは必須項目です。',

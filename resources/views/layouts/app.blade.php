@@ -44,7 +44,7 @@
             display: block;
             width: 100%;
             box-sizing: border-box;
-            border: 1px solid #f7c948;
+            border: 2px solid #ffb900;
             background: transparent;
             padding: 6px 12px;
             margin: 15px 0;

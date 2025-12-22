@@ -49,7 +49,7 @@
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="url">URL</label>
                             <div class="col-md-4">
-                                <input type="text" name="url" class="form-control input-md" id="url" placeholder="https://index.html" />
+                                <input type="text" name="url" class="form-control input-md" id="url" placeholder="https://t-www.evoinf.co.jp/" />
                             </div>
                         </div>
                         
@@ -67,7 +67,7 @@
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="mediaurl">媒体URL</label>
                             <div class="col-md-4">
-                                <input type="text" name="mediaurl" class="form-control input-md" id="mediaurl" placeholder="https://index.html" />
+                                <input type="text" name="mediaurl" class="form-control input-md" id="mediaurl" placeholder="https://t-www.evoinf.co.jp/" />
                             </div>
                         </div>
                         
@@ -90,8 +90,9 @@
                                 @enderror
                             </div>
                         </div>
-                        
+                       
                         <div class="form-group">
+                             <div style="margin-bottom: 10px;"></div>
                             <label class="col-md-4 control-label" for="email">*ご連絡先メールアドレス</label>
                             <div class="col-md-4">
                                 <input type="email" name="email" class="form-control input-md" id="email" required />

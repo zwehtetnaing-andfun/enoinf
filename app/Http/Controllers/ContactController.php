@@ -75,9 +75,9 @@ class ContactController extends Controller
         $messages = [
             'corporate.required' => 'これは必須項目です。',
             'yourname.required' => 'これは必須項目です。',
-            'kana.required' => 'フリガナは全角カナで入力してください。',
+            'kana.required' => 'これは必須項目です。',
             'email.required' => 'これは必須項目です。',
-            'email.email' => 'メールアドレスの形式で入力してください。',
+            'email.email' => 'これは必須項目です。',
             'pref.required' => 'これは必須項目です。',
             'address1.required' => 'これは必須項目です。',
             'tel.required' => 'これは必須項目です。',

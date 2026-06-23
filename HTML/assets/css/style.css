@@ -1,0 +1,137 @@
+/*
+Theme Name: Evo Info Co.LTD
+Author: Andfun
+Description: This theme is for Evo Info Co.LTD website
+*/
+
+/* Contact Form 7 */
+.screen-reader-response li{
+    display: none !important;
+}
+.screen-reader-response p{
+    display: none !important;
+}
+.wpcf7-response-output{
+    text-align: center !important;
+}
+.help-block{
+    display: flex !important;
+    margin-top: -10px !important;
+}
+.control-label{
+    padding-top: 15px !important;
+}
+.wpcf7-form.sent .form-horizontal
+{
+	 display:none !important;
+}
+
+/* pageVisualWrapper CSS */
+.pageVisualWrapper h1{
+	font-size: 36px !important;
+}
+/*縲縲*/
+a:hover {
+	text-decoration: none !important;
+	/*opacity: 0.7;*/
+	opacity: 1 !important;;
+}
+a:hover img, a:hover p {
+	text-decoration: none !important;
+	/*opacity: 0.7;*/
+	opacity: 1 !important;;
+}
+/* Media & Content Page */
+.site_wrapper a:hover {
+	text-decoration: none !important;
+	/*opacity: 0.7;*/
+	opacity: 0.7 !important;;
+}
+.site_wrapper a:hover img, .site_wrapper a:hover p{
+	opacity: 0.7 !important;
+}
+/* Company Profile */
+.companyTable th{
+	font-weight: bold !important;
+}
+/* Page Content */
+.grid-container {
+	  display: grid;
+	  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	  grid-gap: 20px;
+	  padding: 10px;
+	  margin: 0 auto;
+	  overflow: hidden;
+	  text-align: justify;
+}
+@media screen and (max-width: 990px){
+  	.control-label{
+      	 padding-top: 5px !important;
+  	}
+}
+@media screen and (min-width: 767px){
+  	.grid-container{
+		 grid-template-columns: repeat(3, minmax(200px, 1fr));
+		 width: 767px;
+		 margin: 0 20px;
+  	}
+}
+@media screen and (min-width: 900px){
+  	.grid-container{
+		 width: 900px;
+		 margin: 0;
+  	}
+}
+@media screen and (min-width: 1080px){
+  	.grid-container{
+		 width: 1080px;
+		 margin: auto;
+	  	 grid-gap: 30px;
+  	}
+}
+@media screen and (min-width: 1200px){
+  	.grid-container{
+		 width: 1200px;
+		 margin: 0 auto;
+	  	 grid-gap: 40px;
+  	}
+}
+
+#mirapre_sample_container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+#mirapre_sample_container img{
+	width: calc(33.3% - 20px);
+}
+
+@media (max-width: 767px){
+	#mirapre_sample_container img{
+		width: calc(100%);
+	}
+}
+
+.header-font{
+    font-size: 36px !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    line-height: 39.6px !important;
+    color: #ffffff !important;
+    background-color: transparent !important;
+    font-family: 'Open Sans', Roboto, 'Droid Sans', 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif !important;
+    text-align: start !important;
+    text-indent: 0 !important;
+    text-transform: none !important;
+    text-decoration: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    margin-bottom: 10px !important;
+}
+
+/* remove btn at ehondanshi */
+
+#ehon02 .btn_01, #ehon03 .btn_01{
+	display: none;
+}

@@ -1,0 +1,945 @@
+/*
+	
+bootstrapの修正	
+	
+*/
+.navbar-toggle {
+  border: 1px solid #3a454b;
+}
+.navbar-toggle .icon-bar {
+  background: #3a454b;
+}
+/*
+	
+フォント	
+	
+*/
+/*
+	
+パンくず
+	
+*/
+nav#bc {
+  background: #d6e187 !important;
+  border-bottom: 1px solid #bacd35;
+}
+nav#bc .breadcrumb {
+  background: none;
+  margin-bottom: 0;
+}
+nav#bc .breadcrumb li a {
+  text-decoration: none;
+}
+nav#bc .breadcrumb li.active {
+  color: #3a454b;
+}
+/* 
+
+アイコン
+
+*/
+@font-face {
+  font-family: 'Mono Social Icons Font';
+  src: url('../fonts/MonoSocialIconsFont-1.10.eot');
+  src: url('../fonts/MonoSocialIconsFont-1.10d41d.eot?#iefix') format('embedded-opentype'), url('../fonts/MonoSocialIconsFont-1.10.woff') format('woff'), url('../fonts/MonoSocialIconsFont-1.10.ttf') format('truetype'), url('../fonts/MonoSocialIconsFont-1.10.svg#MonoSocialIconsFont') format('svg');
+  src: url('../fonts/MonoSocialIconsFont-1.10.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.symbol,
+a.symbol:before {
+  font-family: 'Mono Social Icons Font';
+  -webkit-text-rendering: optimizeLegibility;
+  -moz-text-rendering: optimizeLegibility;
+  -ms-text-rendering: optimizeLegibility;
+  -o-text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+a.symbol:before {
+  content: attr(title);
+  margin-right: 0.3em;
+  font-size: 130%;
+}
+a.symbol {
+  background: #9f9f9f;
+  padding: 7px 5px 3px 5px;
+  color: white;
+  text-decoration: none;
+}
+/*
+	
+	Clearfix
+	
+*/
+.cf:after {
+  content: ".";
+  display: block;
+  height: 0;
+  font-size: 0;
+  clear: both;
+  visibility: hidden;
+}
+.cf {
+  display: inline-block;
+}
+/* Hides from IE Mac */
+* html .cf {
+  height: 1%;
+}
+.cf {
+  display: block;
+}
+/* End Hack */
+/* 
+
+全体 
+
+*/
+body {
+  background-image: url(../img/bg_03.png);
+  background-repeat: repeat;
+  background-color: #fff;
+  color: #453b39;
+  font-family: 'Open Sans', Roboto, "Droid Sans", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif !important;
+  /*
+	Win8.1以降、OSX 10.9以降で使用できる游ゴシックを考慮する場合
+	font-family: 'Open Sans', Roboto, "Droid Sans", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif!important;
+		
+	*/
+
+}
+body a {
+  color: #3a454b !important;
+}
+body a:hover {
+  color: #667a85;
+}
+body p {
+  line-height: 1.5;
+}
+body p.pCenter {
+  text-align: center;
+}
+body h2 {
+  text-align: center;
+  font-weight: normal;
+  font-size: 24px;
+  margin-bottom: 20px;
+  line-height: 1.2em;
+  letter-spacing: 0.1em;
+  position: relative;
+  margin-top: 1em;
+  color: #50314a;
+  /*
+                @media screen and (max-width : 648px){
+		    background-color: @evoGreen;
+                    font-size: 18px;
+                    text-align: left;
+                    color: #FFF;
+                    padding: 0.3em 0.3em;
+                 
+               
+                }
+                */
+
+}
+body h2 .japanase {
+  font-size: small;
+  font-weight: normal;
+  margin-left: 0.8em;
+}
+body h3 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 21px;
+  margin-bottom: 20px;
+  line-height: 1.2em;
+}
+body h3.h3Left {
+  text-align: left;
+  color: #3a454b;
+}
+body h3.h3Left span {
+  color: #c0c6c0;
+}
+body .btn {
+  border-radius: 1px!important;
+}
+/*
+
+区切り線
+
+*/
+hr {
+  width: 10%;
+  margin: 0 auto 50px;
+}
+hr.hrWhite {
+  border-top: 1px solid #dbdedb;
+}
+hr.hrYellow {
+  border-top: 1px solid #e8a500;
+}
+hr.hrNavy {
+  border-top: 1px solid #667a85;
+}
+hr.hrGray {
+  border-top: 1px solid #8a968a;
+}
+hr.hrWhiteP {
+  border-top: 1px solid #dbdedb;
+  width: 30%;
+  margin: 30px auto 60px;
+}
+hr.hrGrayL {
+  border-top: 1px solid #b5c0c0;
+  width: 100%;
+  margin: 0 auto 20px;
+}
+/* 
+
+ヘッダー
+
+*/
+.header {
+  padding: 10px 0;
+  background-color: #ffffff;
+}
+.header div.headerAddressBox {
+  text-align: right;
+}
+.header div.headerAddressBox p {
+  margin: 0;
+}
+.header div.headerAddressBox p span {
+  display: inline-block;
+}
+.header div.headerAddressBox p.phone {
+  font-weight: bold;
+  color: #586258;
+}
+.header div.headerAddressBox p .tel {
+  margin: 0 1em 0 0;
+  font-size: 1.5em;
+}
+.header div.headerAddressBox p .fax {
+  font-size: 1.2em;
+}
+.header div.headerAddressBox p.note {
+  color: #586258;
+  font-size: 90%;
+}
+.header div.headerLanguage {
+  text-align: right;
+}
+.header div.headerLanguage ul.dropdown-menu {
+  min-width: inherit;
+}
+.header div.headerLanguage li {
+  text-align: left;
+}
+.logo {
+  margin: 0.5em auto;
+  display: block;
+}
+.headerNavBtn {
+  text-align: center;
+  line-height: 1.5em;
+  font-size: 16px;
+}
+.headerNavBtn:hover {
+  background: #daeffa;
+}
+/*
+ナビゲーション
+*/
+.globalNav {
+  text-align: center;
+  background-color: #bacd35;
+}
+.globalNav li {
+  border-left: 1px solid #b3b3b3;
+  padding: 5px 10px;
+}
+.globalNav li#home {
+  border: none;
+}
+.globalNav .nav > li > a {
+  padding: 0 15px;
+}
+.globalNav .nav > li > a:hover,
+.globalNav .nav > li > a:focus {
+  text-decoration: none;
+  background-color: #c8d75e;
+  color: #3a454b;
+}
+.globalNav div.navbar-header .navbar-brand {
+  font-size: 14px;
+  padding: 5px 20px;
+}
+@media screen and (max-width: 767px) {
+  .globalNav li,
+  .globalNav li#home {
+    border-top: 1px solid #b3b3b3;
+    border-left: none;
+  }
+}
+section {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+/*
+	
+NEWS
+	
+*/
+section#newsSection {
+  color: #3a454b;
+  background-image: url(../img/bg_news_evo.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  /* background-color:#3F657A;*/
+
+  background-color: #004d75;
+  color: #fff;
+}
+section#newsSection h2 {
+  margin: 0;
+  color: #fff;
+}
+section#newsSection dl {
+  list-style-type: none;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+section#newsSection a {
+  color: #bacd35!important;
+  text-decoration: underline;
+}
+/*
+
+グリッド
+
+*/
+.section {
+  background: #232829;
+  background: -moz-linear-gradient(50% 0% -90deg, #000000 0%, #232829 100%);
+  background: -o-linear-gradient(-90deg, #000000 0%, #232829 100%);
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0, #000000), color-stop(1, #232829));
+  background: -webkit-linear-gradient(-90deg, #000000 0%, #232829 100%);
+  background: linear-gradient(180deg, #000000 0%, #232829 100%);
+  padding: 2em 0 3em;
+  /*
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff000000,endColorstr=#ff232829,GradientType=0)";
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff000000,endColorstr=#ff232829,GradientType=0);
+*/
+
+}
+.separate {
+  border-bottom: 1px solid #c0c6c0;
+  /* padding-bottom: 40px; */
+
+  margin-bottom: 40px;
+}
+/* 
+
+メインビジュアル
+
+*/
+.mainVisual_wrapper .container {
+  padding: 0;
+}
+.mainVisual_wrapper.section {
+  padding: 0;
+}
+.col_box {
+  background: #FFF;
+  border-radius: 3px;
+  padding: 15px 0 15px;
+  margin-bottom: 1em;
+}
+.Goto {
+  clear: both;
+  text-align: center;
+  padding-top: 20px;
+}
+.btn-goto {
+  background: #bacd35;
+  color: #3a454b;
+  border-color: #cbde46;
+}
+.btn-goto:hover {
+  background: #c1d249 !important;
+  color: #f2f5d9 !important;
+}
+.btn-primary {
+  background: #50314a;
+  border-color: #61425b;
+}
+.btn-primary:hover {
+  background: #603b59 !important;
+  border-color: #61425b;
+  color: #bc91b4 !important;
+}
+/*
+
+拠点情報
+
+*/
+section#office {
+  background-image: url(../img/bg_map.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  color: #3a454b;
+}
+section#office p {
+  padding: 0.5em;
+  background: url(../img/bg_businessoffice_txt.png);
+}
+#maparea1,
+#maparea2,
+#maparea3 {
+  height: 240px;
+  width: 100%;
+  margin: 30px 0;
+}
+/* 
+
+フッター
+
+*/
+div.copyRight {
+  text-align: left;
+  display: block;
+  padding: 15px;
+  color: #3a454b;
+}
+div.socialLink {
+  font-size: 28px;
+  background: #fff;
+}
+div.socialLink .nav > li > a:hover {
+  background: #fff;
+}
+div.socialLink .navbar > li > a:hover {
+  background: #fff;
+}
+#footer {
+  background-color: #bacd35;
+}
+#footer div.copyRight {
+  text-align: right;
+}
+#footer li a:hover {
+  background-color: #c8d75e;
+}
+/*
+	
+共通部ランドマーク
+	
+*/
+#brandsIntro {
+  background-image: url(../img/bg_01.png);
+  background-repeat: repeat;
+  padding-top: 30px;
+}
+#brandsIntro p.footerCopy {
+  text-align: center;
+  color: #c0c6c0;
+  font-weight: bold;
+  font-size: 120%;
+  margin-bottom: 30px;
+}
+#brandsIntro .brandBox {
+  display: block;
+  border-top: 1px solid #c0c6c0;
+  border-bottom: 1px solid #c0c6c0;
+  padding: 0px;
+  margin: 0 0 20px 0;
+  list-style: none;
+}
+#brandsIntro .brandBox li {
+  display: block;
+  list-style: none;
+  padding: 20px 0;
+}
+/*
+	
+サービス概要
+	
+*/
+div.pageVisualWrapper {
+  padding: 3em 0 1em 2em;
+  position: relative;
+}
+div.pageVisualWrapper p {
+  display: inline-block;
+  padding-bottom: 5px;
+  margin-bottom: -5px;
+  color: #fff;
+}
+div.pageVisualWrapper.visualApps p {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 5px;
+  line-height: 1.8;
+}
+div.pageVisualWrapper h1 {
+  color: #FFF;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+div.pageVisualWrapper:after {
+  content: "";
+  display: block;
+  /*background: @evoYellow;*/
+
+  height: 4px;
+  width: 30%;
+  position: absolute;
+  bottom: -5px;
+}
+div.pageVisualWrapper span {
+  font-weight: 100;
+}
+div.pageVisualWrapper.visualService {
+  background-image: url(../img/bg_service.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+}
+div.pageVisualWrapper.visualContact {
+  background-image: url(../img/bg_contact.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+div.pageVisualWrapper.visualCompany {
+  background-image: url(../img/bg_company.jpg);
+  background-size: cover;
+  background-position: 0% 30%;
+}
+div.pageVisualWrapper.visualToppage {
+  padding: 0;
+  background-repeat: no-repeat;
+  background-position: 70% 50%;
+  background-color: #fefefe;
+  font-size: 20px;
+  background-image: url(../img/evotopimage.jpg);
+  background-size: cover;
+  color: #003c5b;
+}
+div.pageVisualWrapper.visualToppage .visualToppageText {
+  padding: 2em 1em 5em 0;
+}
+div.pageVisualWrapper.visualToppage .title {
+  padding: 0 0 0.5em 0;
+}
+div.pageVisualWrapper.visualToppage .title span {
+  display: inline-block;
+}
+div.pageVisualWrapper.visualToppage .title span.evo {
+  font-size: 150%;
+  font-weight: bold;
+  margin: 0 0.5em 0 0;
+}
+div.pageVisualWrapper.visualToppage .subTitle {
+  font-size: 15px;
+  line-height: 1.5;
+}
+@media screen and (max-width: 768px) {
+  div.pageVisualWrapper.visualToppage .visualToppageText {
+    padding: 1em 1em 3em 1em;
+    background-color: rgba(226, 235, 242, 0.6);
+  }
+}
+section#privacySection h3 {
+  text-align: left;
+}
+h2.imgTitle {
+  border-bottom: none;
+}
+h2.imgTitle:after {
+  content: none;
+}
+nav#serviceList {
+  padding: 1em 0 1em 0;
+  background: #3a454b;
+  color: #fff;
+}
+nav#serviceList a {
+  color: #fff!important;
+}
+nav#serviceList dl {
+  margin-bottom: 0;
+  padding: 0.5em 0;
+  /*  @media screen and (max-width : 648px){
+                                border-bottom: 1px #FFF solid;
+                                 }*/
+
+}
+nav#serviceList dl dt {
+  font-size: 180%;
+  text-align: center;
+}
+nav#serviceList dl dt span.iconCircle {
+  max-width: 68px;
+  display: block;
+  margin: auto;
+}
+nav#serviceList dl dd span {
+  font-size: 140%;
+  font-weight: bold;
+  margin-bottom: -0.5em;
+  display: block;
+}
+section.mediaWrapper {
+  border-top: 1px solid #d6e187;
+  padding-top: 40px;
+}
+section.mediaWrapper.exforApps div.mediaLink {
+  border-top: 1px solid #c0c6c0;
+}
+section.mediaWrapper div.appInfo {
+  padding: 0 0 30px;
+}
+section.mediaWrapper.service {
+  padding-top: 3em;
+}
+section.mediaWrapper.service h3 {
+  padding: 40px 0 0;
+}
+section.mediaWrapper.service nav#serviceList {
+  background: #3a454b;
+  padding: 40px 0 0;
+  color: #fff;
+}
+section.mediaWrapper.service nav#serviceList a {
+  color: #fff!important;
+}
+section.mediaWrapper.service nav#serviceList dl {
+  margin-bottom: 40px;
+}
+section.mediaWrapper.service nav#serviceList dl dt {
+  font-size: 180%;
+  text-align: center;
+}
+section.mediaWrapper.service nav#serviceList dl dd span {
+  font-size: 140%;
+  font-weight: bold;
+  margin-bottom: -0.5em;
+  display: block;
+}
+section.mediaWrapper h2 {
+  font-size: 40px;
+}
+section.mediaWrapper h2.h2Left {
+  text-align: left;
+}
+section.mediaWrapper h3.mediaDetail {
+  color: #3a454b;
+  font-size: 24px;
+  text-align: left;
+}
+section.mediaWrapper div.mediaImage figure img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+section.mediaWrapper div.mediaInfo {
+  background: #3a454b;
+  color: #fff;
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+section.mediaWrapper div.mediaInfo dl {
+  color: #c0c6c0;
+}
+section.mediaWrapper div.mediaInfo dl dd span {
+  color: #fff;
+}
+section.mediaWrapper div.mediaInfo h2 {
+  color: #fff;
+}
+section.mediaWrapper div.mediaInfo div.mediaInfoL {
+  text-align: right;
+  margin-bottom: 2em;
+}
+section.mediaWrapper div.mediaInfo div.mediaInfoL dt {
+  text-align: left;
+}
+section.mediaWrapper div.mediaInfo div.mediaInfoR {
+  text-align: left;
+  margin-bottom: 2em;
+}
+section.mediaWrapper div.mediaInfo div.mediaInfoR dt {
+  text-align: right;
+}
+div.mediaSpec dl {
+  display: block;
+  text-align: center;
+}
+div.mediaSpec dl dt {
+  font-size: 280%;
+}
+div.mediaSpec dl dd span {
+  display: block;
+  padding-top: 0.5em;
+  font-size: 140%;
+  margin-bottom: 0.5em;
+  color: #3a454b;
+}
+div.mediaDownload {
+  background: #bacd35;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align: center;
+  clear: both;
+}
+div.mediaDownload hr {
+  /* margin-bottom:1.5em; */
+
+}
+div.mediaDownload p.mediaFootnote {
+  color: #3a454b;
+  padding-top: 1.5em;
+  margin-bottom: 0;
+}
+.btn-mediaPaper {
+  margin: 0 auto;
+  width: 100%;
+  padding: 1em 0;
+  font-size: 140%;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  color: #fff !important;
+}
+.btn-mediaPaper:hover {
+  color: #fff!important;
+}
+div.mediaLink dl.mediaLinkBox dt {
+  background-color: #CCC;
+  color: #FFF;
+}
+div.mediaLink dl.mediaLinkBox dd {
+  background-color: #FFF;
+  color: #000;
+}
+div.mediaLink a:hover {
+  text-decoration: none;
+}
+div.mediaContact {
+  padding-top: 40px;
+  padding-bottom: 30px;
+  border-top: 1px solid #c0c6c0;
+}
+table.mediaOutline th {
+  width: 30%;
+}
+table.mediaOutline td {
+  width: 70%;
+}
+.table-bordered > thead > tr > th,
+.table-bordered > tbody > tr > th,
+.table-bordered > tfoot > tr > th,
+.table-bordered > thead > tr > td,
+.table-bordered > tbody > tr > td,
+.table-bordered > tfoot > tr > td {
+  border: 1px solid #c0c6c0;
+}
+dl.mediaLinkBox {
+  text-align: center;
+}
+dl.mediaLinkBox a {
+  text-decoration: none!important;
+}
+dl.mediaLinkBox a:hover {
+  text-decoration: none!important;
+}
+dl.mediaLinkBox dd.mediaLinkImage {
+  margin: 0 auto;
+  text-align: center;
+  background-color: #FFF;
+  border-radius: 3px;
+  box-shadow: 1px 1px 1px #6A636D;
+  border: 1px solid #D1CCC2;
+  padding: 1em;
+}
+dl.mediaLinkBox dd.mediaLinkDescription {
+  margin-bottom: 1em;
+  line-height: 1.2;
+}
+.serviceLead {
+  text-align: center;
+  color: #50314a;
+  font-size: 1.2em;
+  margin: 0 0 2em;
+}
+.serviceLead span {
+  display: inline-block;
+  text-align: left;
+}
+.serviceBox {
+  overflow: hidden;
+  padding: 0.2em 0 1em 0;
+  text-align: center;
+}
+.serviceBox h3 {
+  text-align: left;
+  font-size: 140%;
+}
+.serviceBox h4 {
+  font-size: 120%;
+  font-weight: bold;
+}
+.serviceBox .serviceText {
+  overflow: hidden;
+}
+.serviceBox .serviceImage {
+  text-align: center;
+  padding: 10px 0;
+}
+.serviceBox .serviceImage img {
+  margin: auto;
+  width: 400px;
+}
+.serviceBox .servicePanel {
+  border: 5px solid #ffffff;
+  background-color: #ffffff;
+  border-radius: 3px;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
+  padding: 4px;
+  display: inline-block;
+  width: 420px;
+  max-width: 95%;
+  margin: 0;
+  box-sizing: border-box;
+}
+.serviceBox .servicePanel:hover {
+  border: 5px solid #e8eae8;
+  background-color: #f6f6f6;
+  text-decoration: none;
+}
+.serviceBox .serviceBody {
+  padding: 0 1em;
+  margin-bottom: 2em;
+  text-align: left;
+}
+.serviceBox .serviceLink {
+  padding: 1em 0;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .ServiceBoxColumn .serviceBox h3 {
+    text-align: center;
+  }
+  .ServiceBoxColumn .serviceBox .serviceImage {
+    padding: 0;
+  }
+  .ServiceBoxColumn .serviceBox .serviceBody {
+    margin: 0;
+    text-align: left;
+    min-height: 9em;
+  }
+}
+#management {
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+#mukashi dl {
+  text-align: center;
+}
+#mukashi dl dt {
+  padding: 1em;
+}
+#mukashi dl dt img {
+  margin: 0 auto;
+}
+#dentou .row {
+  list-style: none;
+  padding: 0;
+}
+#dentou .row li {
+  list-style: none;
+}
+#media .row {
+  list-style: none;
+  padding: 0;
+}
+.companyProfileWrapper {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.contactGateWrapper {
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+.contactGateWrapper h2 {
+  color: #3a454b;
+}
+.contactGateWrapper a:hover {
+  text-decoration: none!important;
+}
+.contactGateWrapper dl {
+  text-align: center;
+  padding: 30px 20px;
+}
+.contactGateWrapper dl dt {
+  font-size: 120%;
+  color: #3a454b;
+}
+.contactGateWrapper dl dd.mediaLinkImage {
+  padding: 10px 40px;
+}
+.contactWrapper {
+  padding: 40px 0 20px;
+}
+.contactWrapper h2 {
+  color: #3a454b;
+}
+.contactWrapper form {
+  padding: 20px 0;
+}
+.contactWrapper form textarea {
+  height: 6em;
+}
+.contactWrapper div.sendButton {
+  padding-top: 20px;
+  margin-top: 20px;
+  border-top: 1px solid #f6f6f6;
+}
+ul#mfp_phase_stat {
+  display: none!important;
+}
+@media screen and (max-width: 990px) {
+  .form-horizontal .control-label {
+    text-align: left;
+  }
+}
+@media (min-width: 991px) {
+  .form-horizontal .control-label {
+    text-align: right;
+  }
+}
+input[type=radio],
+input[type=checkbox] {
+  margin-right: 0.3em;
+}
+a#toTop {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  z-index: 1000;
+}
+@media screen and (max-width: 767px) {
+  a#toTop {
+    display: none;
+  }
+}

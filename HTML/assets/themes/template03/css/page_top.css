@@ -1,0 +1,216 @@
+@charset "utf-8";
+/*------------メインスライド----------------*/
+.main_slider {}
+.main_slider {
+  position: relative; /* ← swiper.cssに含まれています */
+}
+.main_slider:before {
+  content: "";
+  display: block;
+  padding-top: calc(758/1922*100%); /* 縦/横*100の値を書く */
+}
+.main_slider .swiper-wrapper {
+  position: absolute; /* ← swiper.cssと優先順位が干渉するときは工夫してください */
+  top: 0;
+  left: 0;
+}
+.main_slider .swiper-wrapper img {
+  width: 100%;
+  height: auto;
+}
+/*-----------------------------------*/
+
+.scrollBox01 {
+  overflow: auto;
+}
+@media screen and (max-width: 767px) {
+  .scrollBox01 {
+    overflow: auto;
+  }
+}
+.blog_area_top_01 {
+  background-color: #fff;
+  border: 1px solid #bbbbbb;
+  padding: 15px;
+  max-height: 240px;
+  margin-bottom: 0px;
+}
+@media screen and (max-width: 767px) {
+  .blog_area_top_01 {
+    max-height: 200px;
+    margin-bottom: 20px;
+    padding: 15px;
+  }
+}
+.blog_area_top_02 {
+  max-height: 300px;
+}
+@media screen and (max-width: 767px) {
+  .blog_area_top_02 {
+    max-height: 200px;
+  }
+}
+.bg_top01 {
+	position: relative;
+	height: 520px;
+}
+.bg_top01::before{
+	content: "";
+	background: url("../../../../index.html") right top no-repeat;
+	width: 50%;
+	height: 520px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.bg_top02 {
+	position: relative;
+	height: 520px;
+}
+.bg_top02::before{
+	content: "";
+	background: url("../../../../index.html") left top no-repeat;
+	width: 50%;
+	height: 520px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.bg_top03 {
+  background: url(../../../../index.html) center top no-repeat;
+  padding: 60px 0;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+@media screen and (max-width: 767px) {
+  .bg_top01, .bg_top02, .bg_top03 {
+    padding: 15px;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+  }
+  .top_u_txt {
+    padding-bottom: 20px;
+    height: auto;
+  }
+}
+.bg_top_white {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 30px;
+}
+
+@media screen and (max-width: 767px) {
+  .bg_top_white {
+    padding: 15px;
+  }
+}
+
+.bg_green_round{
+	background: url("../img/common/bg_tl.png") left top no-repeat,url("../img/common/bg_tr.png") right top no-repeat,url("../img/common/bg_bl.png") left bottom no-repeat,url("../img/common/bg_br.png") right bottom no-repeat,#f6faeb;
+}
+@media screen and (max-width: 767px) {
+	.bg_green_round{
+		background-size: 40px;
+	}
+}
+
+
+
+
+
+
+/*slider css　トップスライダー
+-------------------------------------*/
+.wideslider_outer {
+  position: relative;
+  min-height: 370px;
+}
+.wideslider {
+  width: 100%;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+@media screen and (max-width : 767px) {
+  .wideslider_outer {
+    position: relative;
+    min-height: auto;
+  }
+  .wideslider_outer .slide_txt {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 20px;
+    margin: 0;
+  }
+}
+.wideslider ul, .wideslider ul li {
+  float: left;
+  display: inline;
+  overflow: hidden;
+}
+.wideslider ul li img {
+  width: 100%;
+  display: none;
+}
+.wideslider_base {
+  top: 0;
+  position: absolute;
+}
+.wideslider_wrap {
+  top: 0;
+  position: absolute;
+  overflow: hidden;
+}
+.slider_prev, .slider_next {
+  top: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: 100;
+  cursor: pointer;
+}
+.slider_prev {
+  background: #fff url(../../../../index.html) no-repeat 95% center;
+}
+.slider_next {
+  background: #fff url(../../../../index.html) no-repeat 5% center;
+}
+/* =======================================
+    ClearFixElements
+======================================= */
+.wideslider ul:after {
+  content: ".";
+  height: 0;
+  clear: both;
+  display: block;
+  visibility: hidden;
+}
+.wideslider ul {
+  display: inline-block;
+  overflow: hidden;
+}
+.topslider_outer {
+  position: relative;
+}
+/*bxslider css
+-------------------------------------*/
+/*bxslider css
+-------------------------------------*/
+.topslider_outer {
+  position: relative;
+}
+.slide figure img {
+  border: 1px solid #000;
+  overflow: hidden;
+  padding: 5px;
+  background-color: #fff;
+  margin-bottom: 15px;
+}
+/**/
+.fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget iframe[style] {
+  width: 100% !important;
+}

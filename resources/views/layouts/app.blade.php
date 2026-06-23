@@ -24,11 +24,36 @@
     <link rel="stylesheet" href="{{ asset('assets/themes/template03/css/jquery.mCustomScrollbar.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/themes/template03/css/whhg.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}" />
+       <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/themes/template03/css/page_top.css') }}">
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
+        <style>
+         div.pageVisualWrapper {
+    padding: 42px 0 1em 2em;
+        position: relative;
+}
+         .form-horizontal .control-label {
+             margin-top: -10px;
+         }
+         .form-group {
+    margin-bottom: 25px;
+}
+        .contact-error-banner {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            border: 2px solid #ffb900;
+            background: transparent;
+            padding: 6px 12px;
+            margin: 15px 0;
+            color: #000000;
+            font-size: 13px;
+            line-height: 1.4;
+            text-align: center;
+        }
+                </style>
     @stack('styles')
 </head>
 <body>
